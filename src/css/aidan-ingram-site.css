@@ -1,0 +1,1854 @@
+/*
+Aidan Ingram's Personal Website CSS
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+
+  :root {
+    --primary-color:        #89CFF0;
+    --white-color:          #FFFFFF;
+    --dark-color:           #212121;
+    --menu-bg-color:        #212529;
+    --imessage-gray:        #e5e5ea;
+    --light-gray-background:#f9f9f9;
+    --dimmed-white:         #dddddd;
+    --checkmark-green:      #28a745;
+    --popup-subtext:        #555;
+    --popup-content:        #28a745;
+    --gray-color:           #909090;
+    --p-color:              #7d7a7a;
+    --popup-hover:          #0056b3;
+    --popup-error:          #dc3545;
+    --success-green:        #28a745;
+    --success-button-hover: #218838;
+    --failure-red:          #dc3545;
+    --failure-button-hover: #c82333;
+    --slate-gray:           #2C2F33;
+
+    --box-shadow:                  rgba(0, 0, 0, 0.15);
+    --project-info-background:     rgba(0, 0, 0, 0.85);
+    --carousel-hover:              rgba(0, 0, 0, 0.3);
+    --shadow-background:           rgba(0, 0, 0, 0.1);
+    --contact-form-border:         rgba(142, 140, 140, 0.35);
+    --popup-background:            rgba(0, 0, 0, 0.5);
+    --popup-shadow:                rgba(0, 0, 0, 0.3);
+    --contact-background:          rgba(255, 255, 255, 0.1);
+    --contact-shadow:              rgba(0, 0, 0, 0.2);
+
+    --base-font-family:     "Plain", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-weight-bold:     600;
+    --font-weight-normal:   400;
+    --font-weight-light:    300;
+
+    --h1-font-size:         56px;
+    --h2-font-size:         48px;
+    --h3-font-size:         38px;
+    --h4-font-size:         34px;
+    --h5-font-size:         30px;
+    --h6-font-size:         24px;
+    --p-font-size:          18px;
+    --base-font-size:       16px;
+    --button-font-size:     20px;
+
+    --border-radius-large:  100%;
+    --border-radius-medium: 80px;
+    --border-radius-small:  40px;
+  }
+/* Aidan Ingram's Personal Website CSS */
+
+/* Default background color */
+body {
+    background-color: var(--white-color); /* Default white for light mode */
+    border: 10px solid var(--dark-color); /* Creates a subtle frame */
+    font-family: var(--base-font-family);
+    padding-top: 80px; /* Keeps navbar from overlapping content */
+
+    /* Prevent flash at the top before scrolling */
+    opacity: 0;
+    visibility: hidden;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+/* Smooth fade-in effect */
+body.fade-in {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #4a90e2;
+        --white-color: #ffffff; /* Dark background for light elements in dark mode */
+        --dark-color: #121212;  /* Light color for text and elements in dark mode */
+        --menu-bg-color: #2a2d32;
+        --imessage-gray: #3a3d42;
+        --light-gray-background: #212529;
+        --dimmed-white: #dddddd;
+        --checkmark-green: #21bf73;
+        --popup-subtext: #bbbbbb;
+        --popup-content: #21bf73;
+        --gray-color: #b0b0b0;
+        --p-color: #cccccc;
+        --popup-hover: #0078d4;
+        --popup-error: #ff4c4c;
+        --success-green: #21bf73;
+        --failure-red: #ff4c4c;
+        --slate-gray: #1e1e1e;
+
+        --box-shadow: rgba(255, 255, 255, 0.15);
+        --project-info-background: rgba(255, 255, 255, 0.85);
+        --carousel-hover: rgba(255, 255, 255, 0.3);
+        --shadow-background: rgba(255, 255, 255, 0.1);
+        --contact-form-border: rgba(255, 255, 255, 0.35);
+        --popup-background: rgba(0, 0, 0, 0.7);
+        --popup-shadow: rgba(255, 255, 255, 0.2);
+        --contact-background: rgba(0, 0, 0, 0.3);
+        --contact-shadow: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Dark Mode Body background */
+    body {
+        background-color: var(--dark-color); /* Background color for dark mode */
+        border: 10px solid #444444; /* Light border in dark mode */
+        opacity: 1; /* Ensure content is visible */
+        visibility: visible; /* Make body visible */
+    }
+
+    .mb-0 {
+        color: var(--white)
+    }
+    .mb-4 {
+        color: var(--white);
+    }
+    .mb-5 {
+        color: var(--white);
+    }
+    .mb-7 {
+        color: #a1a1a0;
+    }
+    .section-title {
+        color: var(--white) !important;
+    }
+    .test-desc {
+        color: var(--white);
+    }
+    .faq-info-text {
+        color: var(--white);
+    }
+    .und {
+        color: var(--white);
+    }
+    .und:hover {
+    color: var(--primary-color);
+}
+    .email-link {
+        color: var(--white) !important;
+    }
+    .email-link:hover {
+        color: var(--primary-color) !important;
+    }
+    .chat-box {
+        box-shadow: none !important;
+    }
+    .contact-form-section {
+        background: var(--slate-gray) !important;
+        box-shadow: none !important;
+    }
+    .contact-form .form-group {
+        color: var(--white) !important;
+    }
+    .contact-form .form-control {
+        color: var(--dimmed-white) !important;
+    }
+
+    .contact-info-section {
+        box-shadow: none !important;
+    }
+
+    .popup-message p,
+    .popup-subtext p {
+        color: #111 !important;
+    }
+
+
+    /* Rest of your dark mode styling */
+    .card-header {
+        background-color: #444 !important;
+        color: #ddd !important;
+        border-bottom: 1px solid #666 !important;
+    }
+
+    .card-body {
+        background-color: #555 !important;
+        color: #eee !important;
+    }
+
+    .card-header .btn-link {
+        color: #ddd !important;
+        text-decoration: none;
+    }
+
+    .card-header .btn-link.collapsed {
+        color: #bbb !important;
+    }
+
+    .card-header .btn-link:not(.collapsed) {
+        color: white !important;
+    }
+    .faq .card {
+        border: none !important; /* Removes white border while keeping background */
+        background-color: #444 !important; /* Keeps the FAQ card background gray */
+    }
+
+    .faq .card-header {
+        background-color: #444 !important; /* Keeps the darker gray */
+        color: #ddd !important; /* Ensures text is readable */
+    }
+
+    .faq .card-body p{
+        background-color: #555 !important; /* Slightly lighter gray to maintain contrast */
+        color: #eee !important; /* Keeps text white for readability */
+        border: none !important; /* Ensures no unexpected border */
+    }
+    .message {
+        color: white !important;
+    }
+    .navbar {
+        background-color: #1e1e1e !important; /* Dark background */
+        border-bottom: 1px solid #444; /* Slight border for separation */
+    }
+    .navbar-logo {
+        filter: brightness(0) saturate(100%) invert(32%) sepia(18%) saturate(609%) hue-rotate(155deg) brightness(101%) contrast(102%);
+    }
+
+    .navbar-brand,
+    .nav-link {
+        color: #ddd !important; /* Light text for contrast */
+    }
+    #aboutTabs .nav-item .nav-link.active {
+        color: var(--white) !important; /* Change to a readable color */
+        background-color: #1a1a1a !important; /* Darker background for active tab */
+        border-color: var(--white) !important; /* Matches primary theme */
+
+    }
+
+    /* Optional: Change hover effect for inactive tabs */
+    #aboutTabs .nav-item .nav-link:hover {
+        color: var(--white-color) !important;
+    }
+
+    .navbar-toggler-icon {
+        color: var(--white); /* Make toggler visible in dark mode */
+    }
+    .navbar-collapse {
+        background: #1e1e1e !important; /* Ensures mobile dropdown matches */
+    }
+
+    .navbar-nav .nav-item .nav-link:hover {
+        color: white !important; /* Brighter on hover */
+    }
+    /* ========================= */
+    /* TEXT STYLING (Ensuring Contrast) */
+    /* ========================= */
+
+    .project-info {
+        background-color: #121212 !important; /* Solid black background */
+        color: var(--dimmed-white) !important; /* White text for contrast */
+        padding: 8px 12px; /* Slightly increase padding for better readability */
+        border: none; /* Thin white border to separate text */
+        border-radius: 4px; /* Optional: Slight rounding for smoothness */
+    }
+
+    /* Maintain spacing */
+    .project-info h5 {
+        margin-bottom: 4px;
+
+    }
+
+    .project-info p {
+        margin: 0;
+        font-size: 1rem; /* Slightly larger for readability */
+    }
+
+    /* ========================= */
+    /* IMPROVE PREVIOUS/NEXT BUTTON VISIBILITY */
+    /* ========================= */
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(1) brightness(2); /* Ensures high contrast */
+    }
+
+    /* Make navigation buttons larger & more visible */
+    .carousel-control-prev,
+    .carousel-control-next {
+        background-color: rgba(255, 255, 255, 0.2) !important; /* Light transparent background */
+        width: 45px !important;
+        height: 45px !important;
+        border-radius: 50%;
+        transition: background 0.3s ease-in-out, transform 0.2s;
+    }
+
+    /* Hover effect for better visibility */
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        background-color: rgba(255, 255, 255, 0.6) !important; /* More visible on hover */
+        transform: scale(1.1); /* Slight pop effect */
+    }
+
+    /* Adjust button positioning */
+    .carousel-control-prev {
+        left: 2%;
+    }
+
+    .carousel-control-next {
+        right: 2%;
+    }
+    /* Darker color for the owl-dots buttons */
+    .owl-dots .owl-dot span {
+        background-color: #444 !important; /* Set a darker color for the inactive dots */
+    }
+
+    /* Darker color for the active owl-dot button */
+    .owl-dots .owl-dot.active span {
+        background-color: var(--primary-color) !important; /* Even darker color for the active dot */
+    }
+
+    .footer {
+        background-color: #1e1e1e !important;
+    }
+}
+
+
+
+
+
+  /*---------------------------------------
+     TYPOGRAPHY
+  -----------------------------------------*/
+
+  h1 {
+    font-size: var(--h1-font-size);
+  }
+
+  h1,
+  h3 {
+    font-weight: var(--font-weight-light);
+  }
+
+  h2 {
+    font-size: var(--h2-font-size);
+  }
+
+  h3 {
+    font-size: var(--h3-font-size);
+      text-align: center;
+  }
+
+  h4 {
+    font-size: var(--h4-font-size);
+  }
+
+  h5 {
+    font-size: var(--h5-font-size);
+  }
+
+  h6 {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--h6-font-size);
+  }
+
+  p {
+    color: #7d7d7a;
+    font-size: var(--p-font-size);
+    font-weight: var(--font-weight-light);
+    letter-spacing: 0.3px;
+    line-height: 2em;
+  }
+
+  .section-padding {
+    padding: 3rem 0;
+  }
+
+  .custom-icon {
+    font-size: 12px;
+    position: relative;
+    bottom: 3px;
+    left: 5px;
+    transform: rotate(-25deg);
+  }
+
+
+  /* CUSTOM BUTTON */
+.custom-btn {
+    background: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    color: var(--dark-color);
+    letter-spacing: 0.2px;
+    padding: 6px 36px 10px 36px;
+    font-size: var(--button-font-size);
+    white-space: nowrap;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth transition */
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+    background: var(--white-color) !important; /* Turns white on hover */
+    color: var(--dark-color) !important; /* Keeps text dark for contrast */
+}
+.custom-btn2 {
+    background: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    color: var(--dark-color);
+    letter-spacing: 0.2px;
+    padding: 6px 36px 10px 36px;
+    font-size: var(--button-font-size);
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    width: 100%
+}
+
+.custom-btn2:hover,
+.custom-btn2:focus {
+    background: var(--dark-color) !important; /* Changes background on hover */
+    color: var(--white-color) !important; /* Ensures text remains white */
+    text-decoration: none !important; /* Prevents underlining on hover */
+}
+/* Ensures form submit button looks like custom-btn */
+.contact-form .form-control[type="submit"] {
+    background: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    color: var(--dark-color);
+    font-size: var(--button-font-size);
+    padding: 10px 36px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    width: 100%; /* Makes sure it behaves properly inside the form */
+    display: block;
+}
+
+/* Hover effect */
+.contact-form .form-control[type="submit"]:hover,
+.contact-form .form-control[type="submit"]:focus {
+    background: var(--white-color);
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+
+
+/*---------------------------------------
+   GENERAL
+-----------------------------------------*/
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  *::before,
+  *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  a {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: all 0.4s linear;
+  }
+
+  a:hover  {
+    color: var(--dark-color);
+    text-decoration: underline;
+  }
+
+
+  /*---------------------------------------
+     MENU
+  -----------------------------------------*/
+
+/* Navbar - Always Visible on Page Load */
+.navbar {
+    background: var(--dark-color);
+    padding: 0.6rem 1rem; /* Slightly increased padding */
+    transition: all 300ms ease-in-out;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    left: 0;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    height: 70px; /* Slightly taller navbar */
+}
+
+/* When scrolled down, navbar remains solid */
+.navbar.scroll {
+    background: var(--dark-color);
+    padding: 0.5rem 1rem;
+    opacity: 1;
+}
+
+.navbar-brand {
+    color: var(--white-color); /* Ensures text is always visible */
+    font-weight: var(--font-weight-light);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+    position: relative;
+    text-decoration: none; /* Removes default underline */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Ensure text color remains on hover */
+.navbar-brand:hover {
+    color: var(--white-color) !important; /* Keeps text from disappearing */
+}
+
+/* Underline Effect */
+.navbar-brand::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Adjust spacing from text */
+    width: 100%;
+    height: 2px; /* Thickness of underline */
+    background-color: var(--primary-color); /* Blue underline */
+    opacity: 0; /* Initially invisible */
+    transform: scaleX(0); /* Start with no width */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show the underline smoothly on hover */
+.navbar-brand:hover::after {
+    opacity: 1;
+    transform: scaleX(1); /* Expand to full width */
+}
+.navbar-image img {
+    height: 40px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+    display: block;
+}
+
+.navbar-image {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Space between logo and text */
+    position: relative;
+    top: 1px;
+}
+
+
+/* Navbar Links (Desktop Alignment) */
+.navbar-expand-lg .navbar-nav {
+    display: flex;
+    justify-content: flex-start; /* Shifts links slightly left */
+    margin-left: 4rem; /* Adjust spacing */
+}
+
+/* Navbar Collapse (Dropdown) */
+.navbar-collapse {
+    background: var(--dark-color); /* Solid background */
+    padding: 10px 0;
+    border-radius: 10px;
+    width: 100%; /* Ensures it takes full width */
+}
+
+/* Navbar Links */
+.navbar-nav {
+    width: 100%; /* Ensures full width dropdown */
+    text-align: center;
+}
+
+.navbar-nav .nav-item {
+    width: 100%;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    color: var(--gray-color);
+    font-weight: var(--font-weight-light);
+    font-size: var(--base-font-size);
+    border-bottom: 1px solid transparent;
+}
+
+/* Active/Hover Links */
+.navbar-nav .nav-link {
+    color: var(--gray-color);
+    font-size: var(--base-font-size);
+    font-weight: var(--font-weight-light);
+    position: relative; /* Needed for the underline effect */
+    text-decoration: none; /* Removes default underline */
+    transition: color 0.3s ease-in-out;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    justify-content: center;
+    height: 100%; /* Matches the navbar height */
+    padding-top: 0.5rem; /* Pushes text down slightly */
+    padding-bottom: 0.5rem; /* Adds balance */
+    line-height: 1.2; /* Ensures text isn't stretched */
+    top: 2px;
+}
+
+/* Underline Effect for Navbar Links */
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Adjust spacing */
+    width: 100%;
+    height: 2px; /* Thickness of underline */
+    background-color: var(--primary-color); /* Same blue underline */
+    opacity: 0; /* Initially hidden */
+    transform: scaleX(0); /* Start with no width */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Smooth Underline Appears on Hover */
+.navbar-nav .nav-link:hover {
+    color: var(--white-color); /* Keep text color consistent */
+}
+
+.navbar-nav .nav-link:hover::after {
+    opacity: 1;
+    transform: scaleX(1); /* Expands smoothly */
+}
+
+
+/* Download CV Button */
+.navbar .custom-btn {
+    background: var(--primary-color);
+    color: var(--dark-color);
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.navbar .custom-btn:hover {
+    background: var(--dark-color);
+    color: var(--white-color);
+}
+
+/* Navbar Toggler (Hamburger Menu) */
+/* Ensure Navbar Toggler (Hamburger Menu) is Visible */
+.navbar-toggler {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex; /* Ensure it is visible */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger Icon */
+.navbar-toggler .navbar-toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white-color);
+    position: relative;
+    display: block; /* Ensure it's visible */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Create the three lines for the hamburger */
+.navbar-toggler .navbar-toggler-icon::before,
+.navbar-toggler .navbar-toggler-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: var(--white-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-toggler .navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler .navbar-toggler-icon::after {
+    top: 8px;
+}
+
+/* When Navbar is Open, Transform Icon to 'X' */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background: transparent; /* Hide middle bar */
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+@media screen and (max-width: 991px) {
+    /* Navbar Brand (Mobile View) */
+    .navbar-brand {
+        font-size: 1.3rem; /* Smaller text */
+        white-space: nowrap;
+        max-width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Adjust Navbar Padding for Mobile */
+    .navbar {
+        padding: 0.8rem 1rem;
+    }
+
+    /* Ensure Navbar Links Are Centered in Mobile Dropdown */
+    .navbar-nav {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    /* Mobile Dropdown Menu Styling */
+    .navbar-collapse {
+        width: 100%;
+        padding: 10px 0;
+        background: var(--dark-color);
+        border-radius: 10px;
+    }
+
+    /* Mobile-Friendly Download CV Button */
+    .navbar .custom-btn {
+        font-size: 0.9rem; /* Smaller font */
+        padding: 8px 16px; /* Reduced padding */
+        width: auto; /* Prevents stretching */
+        max-width: 150px; /* Limits width */
+    }
+
+    /* Mobile Navbar Toggler (Fixes 'X' Button Size) */
+    .navbar-toggler {
+        width: 35px;
+        height: 35px;
+    }
+
+    .navbar-toggler .navbar-toggler-icon {
+        width: 20px; /* Adjusted to prevent oversized close button */
+        height: 2px;
+    }
+    .navbar-image img {
+        height: 35px;
+    }
+}
+
+
+
+
+
+/*---------------------------------------
+     HERO
+  -----------------------------------------*/
+/* Profile picture scaling */
+.about-image {
+    width: 100%;
+    max-width: 300px; /* Prevents image from getting too large */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Adds space below image to separate it from the chat */
+}
+
+/* Adjust image size for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-image {
+        max-width: 200px; /* Reduce image size */
+        margin-bottom: 15px; /* Reduce spacing for mobile */
+    }
+}
+
+/* Hero Title */
+.hero-title {
+    background: var(--dark-color);
+    border-radius: var(--border-radius-medium);
+    color: var(--white-color);
+    display: inline-block;
+    margin: 0.5rem 0;
+    padding: 0.5rem 2rem 1.5rem 2rem;
+    font-size: 2.2em;
+}
+
+/* Chat Box Styling */
+.chat-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Matches profile image width */
+    padding: 20px;
+    background: var(--light-gray-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--box-shadow);
+    margin-top: 20px; /* Adds spacing between the image and chat box */
+}
+
+/* Common message bubble styles */
+.message {
+    max-width: 80%;
+    padding: 16px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    font-size: clamp(18px, 2vw, 24px);
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+/* Employer messages (left-aligned) */
+.message.employer {
+    align-self: flex-start;
+    background-color: var(--imessage-gray);
+    color: var(--dark-color);
+    text-align: left;
+}
+
+/* Aidan's messages (right-aligned) */
+.message.aidan {
+    align-self: flex-end;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: left;
+}
+
+/* Style for email link inside the chat */
+.message.aidan a.email-link,
+.message.employer a.email-link {
+    background: var(--imessage-gray);
+    color: var(--dark-color);
+    text-decoration: underline;
+    padding: 0;
+    font-size: inherit;
+    display: inline;
+}
+
+/* Email link hover effect */
+.email-link:hover {
+    background: var(--dark-color);
+    color: var(--white-color);
+}
+
+/* Mobile Optimizations */
+@media screen and (max-width: 768px) {
+    .chat-box {
+        max-width: 90%; /* Prevents the chat box from being too wide */
+        padding: 15px; /* Slightly smaller padding for mobile */
+        margin-top: 15px; /* Reduces space on smaller screens */
+    }
+
+    .message {
+        font-size: clamp(16px, 4vw, 22px); /* Adjusts message text size for mobile */
+        padding: 12px 16px;
+    }
+}
+
+
+
+  /*---------------------------------------
+     ABOUT
+  -----------------------------------------*/
+
+  .about-image {
+    border-radius: var(--border-radius-small);
+  }
+
+  .profile-list li {
+    margin: 0.3rem 0;
+  }
+
+  .profile-list strong {
+    display: inline-block;
+    width: 30%;
+    margin-right: 1rem;
+  }
+
+.github-link {
+    text-decoration: underline;
+}
+
+.col-lg-6.col-md-6.col-12 {
+    max-height: 400px; /* Adjust height based on design */
+    overflow-y: auto; /* Enables scrolling */
+    padding-right: 20px; /* Prevents text from touching the edge */
+    word-wrap: break-word; /* Ensures text does not overflow horizontally */
+}
+/* Center the "About Me" header */
+#about h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem; /* Adjust size as needed */
+}
+
+/* Ensure the About Me section stays aligned */
+#about .row {
+    justify-content: center;
+    text-align: center;
+}
+
+/* Keeps Image and Table at Equal Width */
+.col-lg-6 {
+    flex: 1;
+    max-width: 50%;
+}
+
+/* Ensures the Additional About Info Section is Centered */
+.about-third {
+    text-align: center;
+    margin-top: 50px;
+}
+/* Increase font size for paragraphs in the About section */
+.about-third p {
+    font-size: 1.2rem; /* Adjust as needed */
+    line-height: 1.6;  /* Improves readability */
+    color: var(--dark-color); /* Ensures visibility */
+}
+
+
+
+
+/*---------------------------------------
+   FAQ
+-----------------------------------------*/
+
+  .faq .card-header {
+    padding: 0;
+  }
+
+  .faq .btn-link {
+    color: var(--dark-color);
+    font-size: var(--h6-font-size);
+    text-align: left;
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .faq .btn-link:focus,
+  .faq .btn-link:hover {
+    color: var(--dark-color);
+    text-decoration: none;
+  }
+
+  .faq .card-body {
+    padding: 2rem;
+  }
+
+.faq-info-text {
+    font-size: var(--base-font-size);
+    display: block;
+    margin: 1.5rem 2rem 0 2rem;
+}
+
+.faq-info-text a {
+    font-size: inherit; /* Keeps the same font size as the surrounding text */
+    text-decoration: underline; /* Ensures the link is underlined */
+    display: inline; /* Forces the link to stay in the same line */
+}
+
+/* ========================= */
+/* PROJECT CAROUSEL STYLES (Final Fix) */
+/* ========================= */
+
+#projectCarousel {
+    max-width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background-color: transparent; /* Ensure no white background */
+    border: none; /* Remove any unintended borders */
+    padding: 0; /* No extra spacing */
+    margin: 0; /* No extra margins */
+}
+
+/* Ensure slides fill the carousel properly */
+#projectCarousel .carousel-inner {
+    height: 100%;
+    display: flex; /* Ensure proper sliding */
+    overflow: hidden; /* Prevent extra white gaps */
+}
+
+/* Fix slide movement */
+#projectCarousel .carousel-item {
+    transition: transform 0.8s ease-in-out; /* Smooth transition */
+    flex: 0 0 100%; /* Ensure each slide takes full width */
+    background-color: transparent; /* Prevent any white wrapping */
+}
+
+/* Image Styling */
+.project-img {
+    max-height: 280px;
+    width: 100%;
+    object-fit: cover; /* Use 'contain' if images are getting cropped */
+    border-radius: 6px;
+}
+
+/* ========================= */
+/* TEXT STYLING (Blending Fix) */
+/* ========================= */
+
+.project-info {
+    background-color: var(--project-info-background); /* Softer dark */
+    color: var(--dimmed-white); /* Slightly dimmed white */
+    padding: 5px 10px; /* Reduce padding */
+    margin: 0; /* Prevent white gap */
+    border: none; /* Remove any unexpected border */
+    border-radius: 0; /* Ensure full blending */
+}
+
+/* Maintain spacing */
+.project-info h5 {
+    margin-bottom: 3px;
+}
+
+.project-info p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ========================= */
+/* FIX: Make Next/Previous Buttons Visible (Smaller & Aligned) */
+/* ========================= */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+/* Make navigation buttons smaller */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: var(--shadow-background);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: var(--carousel-hover);
+}
+
+/* Adjust button positioning */
+.carousel-control-prev {
+    left: 1%;
+}
+
+.carousel-control-next {
+    right: 1%;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN FIXES */
+/* ========================= */
+
+@media (max-width: 768px) {
+    #projectCarousel {
+        height: auto;
+    }
+
+    .project-info {
+        padding: 3px 6px; /* Reduce padding for mobile */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+
+
+
+
+
+  /*---------------------------------------
+     TESTIMONIALS
+  -----------------------------------------*/
+
+  .testimonials {
+    background: var(--light-gray-background);
+  }
+
+.testimonials-image {
+    width: 150px; /* Adjust as needed */
+    height: auto; /* Maintains aspect ratio */
+    margin: 0 1rem 1rem 1rem;
+    object-fit: cover; /* Ensures the image looks good if cropped */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+
+  .testimonials-image img {
+    border-radius: var(--border-radius-medium);
+  }
+
+  .testimonials-info {
+    width: 100%;
+  }
+
+  .testimonials .owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 2rem;
+  }
+
+  .testimonials .owl-theme .owl-dots .owl-dot {
+    outline: none;
+  }
+
+  .testimonials .owl-theme .owl-dots .owl-dot span {
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+  }
+
+  .testimonials .owl-theme .owl-dots .owl-dot.active span,
+  .testimonials .owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--primary-color);
+  }
+
+
+  /*---------------------------------------
+     CONTACT
+  -----------------------------------------*/
+
+  .contact-form .form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--contact-form-border);
+    box-shadow: none;
+    border-radius: 0;
+    -webkit-appearance: none;
+    outline: none;
+    color: var(--dark-color);
+    font-weight: var(--font-weight-light);
+    padding-left: 0;
+    cursor: text;
+  }
+
+  .contact-form input {
+    height: calc(2.25rem + 10px);
+  }
+
+  .contact-form .form-group {
+    margin: 0 0 1rem;
+    position: relative;
+  }
+
+  .contact-form .form-control,
+  .webform-label {
+    transition: all 0.4s;
+    touch-action: manipulation;
+  }
+
+  .webform-label {
+    cursor: text;
+    font-size: 12px;
+    font-weight: var(--font-weight-light);
+    margin-bottom: 5px;
+  }
+
+  .contact-form .form-control:placeholder-shown + .webform-label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+  }
+
+  .contact-form ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+    color: var(--dark-color);
+  }
+
+  .contact-form ::-moz-placeholder {
+    opacity: 0;
+    transition: inherit;
+    color: var(--dark-color);
+  }
+
+  .contact-form .form-control:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+
+  .contact-form .form-control:focus::-moz-placeholder {
+    opacity: 1;
+  }
+
+  .contact-form .form-control:not(:placeholder-shown) + .webform-label,
+  .contact-form .form-control:focus + .webform-label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+    color: var(--gray-color);
+  }
+
+  .contact-form #submit-button {
+    background: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius-medium);
+    color: var(--dark-color);
+    cursor: pointer;
+    font-size: var(--p-font-size);
+    line-height: 0;
+    margin-top: 2.5rem;
+    padding: 1.5rem 1.8rem 1.8rem 1.8rem;
+    white-space: nowrap;
+    max-width: 190px;
+  }
+
+  .copyright-text {
+    font-size: var(--base-font-size);
+  }
+@media screen and (max-width: 768px) {
+    .contact-form {
+        width: 90%; /* Slightly reduces width to make it more compact */
+        max-width: 400px; /* Prevents form from being too wide */
+        padding: 15px; /* Reduces padding */
+    }
+
+    .contact-form .form-control {
+        font-size: 14px; /* Keeps text readable but not too large */
+        height: 40px; /* Makes inputs slightly smaller */
+        padding: 8px 10px; /* Reduces padding inside input fields */
+    }
+
+    .contact-form textarea {
+        height: 80px; /* Keeps textarea usable but not oversized */
+    }
+
+    .contact-form #submit-button {
+        font-size: 14px; /* Reduce button font size slightly */
+        padding: 12px 16px; /* Keeps button touch-friendly but compact */
+        margin-top: 1.5rem; /* Reduces extra spacing above the button */
+    }
+
+    .webform-label {
+        font-size: 11px; /* Slightly smaller label text */
+    }
+}
+
+
+/* Background overlay */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--popup-background); /* Dark overlay */
+    backdrop-filter: blur(5px); /* Blurred background effect */
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Centered pop-up box */
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px; /* Square shape */
+    min-height: 300px; /* Increased height to prevent overflow */
+    text-align: center;
+    box-shadow: 0px 10px 30px var(--popup-shadow);
+    animation: slideIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Ensures content stays centered */
+    align-items: center; /* Centers the button properly */
+}
+
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translate(-50%, -55%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+/* Checkmark icon */
+.popup-icon {
+    font-size: 48px;
+    color: var(--checkmark-green); /* Green checkmark */
+    margin-bottom: 10px;
+}
+
+/* Main message */
+.popup-message {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Subtext under main message */
+.popup-subtext {
+    font-size: 14px;
+    color: var(--popup-subtext);
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.popup-content button {
+    padding: 12px 20px; /* Ensures a comfortable click area */
+    width: 80%; /* Keeps the button within bounds */
+    max-width: 200px; /* Prevents overflow */
+    background: var(--popup-content);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+    white-space: nowrap; /* Prevents button text from wrapping */
+    text-align: center;
+}
+
+/* Button hover effect */
+.popup-content button:hover {
+    background: var(--popup-hover);
+}
+
+/* Show pop-up effect */
+.popup.show {
+    display: block;
+    opacity: 1;
+}
+
+.popup-error .popup-icon i {
+    color: var(--popup-error); /* Red for error */
+}
+@media (max-width: 400px) {
+    .popup-content {
+        width: 90%; /* Adjust width for smaller screens */
+        min-height: 320px; /* Ensure enough space */
+    }
+
+    .popup-content button {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 250px;
+        font-size: 14px;
+    }
+}
+/* Success Popup */
+.popup-success .popup-content button {
+    background: var(--success-green); /* Green for success */
+}
+
+.popup-success .popup-content button:hover {
+    background: var(--success-button-hover);
+}
+
+/* Error Popup */
+.popup-error .popup-content button {
+    background: var(--failure-red); /* Red for error */
+}
+
+.popup-error .popup-content button:hover {
+    background: var(--failure-button-hover);
+}
+
+/*---------------------------------------
+   FOOTER + MOBILE SUPPORT
+-----------------------------------------*/
+/* Footer Styling */
+.footer {
+    background: var(--dark-color);
+    color: var(--white-color);
+    padding: 20px 0; /* Keeps it compact */
+    text-align: center;
+}
+
+/* Footer Content - Flexbox Layout */
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Quick Links & Socials Row */
+.footer .footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 40px; /* Add more space between Quick Links & Follow Me */
+}
+
+
+/* Quick Links Styling */
+.footer .list-unstyled {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.footer .list-unstyled li {
+    margin: 3px 0;
+}
+
+/* Social Media Section */
+.footer .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 8px; /* Ensures space between title & icons */
+}
+
+/* Links */
+.footer a {
+    color: var(--gray-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+}
+
+/* Social Media Icons */
+.footer i {
+    font-size: 20px;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.footer i:hover {
+    color: var(--gray-color);
+}
+
+/* Witty Contact Link */
+.contact-link {
+    margin-top: 5px;
+    font-size: inherit; /* Ensures it matches surrounding text */
+    font-weight: normal;
+}
+
+/* Fixes the Link Font Size */
+.contact-link a {
+    font-size: inherit; /* Forces it to match the surrounding text */
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link a:hover {
+    color: var(--white-color);
+}
+.footer-logo img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px; /* Add spacing between logo and copyright */
+    opacity: 0.8; /* Slight transparency for subtle effect */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.footer-logo img:hover {
+    opacity: 1; /* Full visibility on hover */
+}
+
+
+/* Copyright */
+.copyright-text {
+    font-size: 12px;
+    color: var(--gray-color);
+    margin-top: 3px; /* Reduced from 5px */
+    padding-bottom: 0px; /* Ensures footer sits flush */
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    /* Keep Footer Compact */
+    .footer {
+        padding: 15px 0;
+    }
+
+    /* Keep Quick Links & Follow Me Side-by-Side */
+    .footer .footer-links {
+        display: flex;
+        flex-direction: row; /* Ensures they stay in a row */
+        justify-content: space-between; /* Pushes them apart */
+        align-items: flex-start; /* Aligns titles evenly at the top */
+        width: 90%; /* Keeps them centered while giving them space */
+        max-width: 600px; /* Prevents excessive spreading */
+        margin: 0 auto; /* Ensures proper centering */
+    }
+
+    /* Adjust Title Font Size & Alignment */
+    .footer h5 {
+        font-size: 16px; /* Slightly increased from 14px */
+        margin-bottom: 5px; /* Keep spacing tight */
+        text-align: left; /* Ensures alignment consistency */
+    }
+
+    /* Quick Links - Reduce Spacing */
+    .footer .list-unstyled {
+        display: flex;
+        flex-direction: column; /* Stack them vertically */
+        align-items: center;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+
+    .footer .list-unstyled li {
+        margin: 2px 0; /* Minimal spacing between links */
+        padding: 0; /* Ensures no extra padding */
+        line-height: 1.2; /* Keeps the text compact */
+    }
+
+
+    /* Social Media Section */
+    .footer .socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Social Media Icons */
+    .footer .social-icons {
+        display: flex;
+        gap: 12px; /* Adds space between social icons */
+        margin-top: 5px; /* Keeps spacing even */
+    }
+
+    /* Ensure icons aren't too big */
+    .footer i {
+        font-size: 18px;
+    }
+
+    /* Adjust Witty Contact Link */
+    .contact-link {
+        font-size: 13px;
+        margin-bottom: 3px; /* Reduce space before copyright */
+    }
+
+    /* Reduce Copyright Text Size */
+    .copyright-text {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------
+   SOCIAL LINKS
+-----------------------------------------*/
+
+  .social-links {
+    margin: 40px 0;
+    padding: 0;
+  }
+
+  .social-links li {
+    display: inline-block;
+    list-style: none;
+  }
+
+  .social-links a {
+    display: inline-block;
+    color: var(--p-color);
+    font-size: var(--h6-font-size);
+    margin: 5px 20px 5px 0;
+  }
+
+  .social-links a:hover {
+    color: var(--dark-color);
+  }
+
+
+  /*---------------------------------------
+     RESPONSIVE STYLES
+  -----------------------------------------*/
+
+  @media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 32px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    .email-link {
+      font-size: 28px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+
+    .hero-title {
+      font-size: 1.8em;
+      padding-bottom: 1rem;
+    }
+
+    .email-link {
+      font-size: 22px;
+      padding: 0.5rem 2rem 0.7rem 2rem;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .navbar-nav {
+      margin: 1rem 0;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+      display: inline-block;
+      margin: 5px 0.5rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .hero-text {
+      position: relative;
+      top: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .hero-title {
+      font-size: 26px;
+    }
+
+    .email-link {
+      font-size: 20px;
+      padding: 0.3rem 2rem 0.6rem 2rem;
+    }
+  }
+
+/* Container to hold both sections */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; /* Creates separation between the two sections */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+}
+
+/* Contact Form Box */
+.contact-form-section {
+    flex: 1;
+    max-width: 600px;
+    background: var(--white-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px var(--shadow-background);
+    border: 1px solid var(--shadow-background);
+}
+
+/* Contact Info Box */
+/* Contact Info Section - 2x2 Grid */
+/* Contact Info Section - Dark Slate Gray */
+/* Contact Info Section - Always a 2x2 Grid */
+.contact-info-section {
+    background: var(--slate-gray); /* Dark Slate Gray */
+    color: var(--white-color);
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--contact-shadow);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+    grid-template-rows: repeat(2, 1fr); /* Always 2 rows */
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto; /* Centering */
+}
+
+/* Individual Contact Boxes */
+.contact-info-box {
+    background: var(--contact-background); /* Subtle contrast */
+    padding: 15px; /* Reduced padding for mobile */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icons */
+.contact-info-box i {
+    font-size: 28px; /* Slightly smaller on mobile */
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+/* Titles */
+.contact-info-box h3 {
+    font-size: 18px; /* Slightly smaller */
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* Text */
+.contact-info-box p {
+    font-size: 13px; /* Smaller text for mobile */
+    margin: 3px 0;
+}
+
+/* Links */
+.contact-info-box a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-info-box a:hover {
+    color: var(--primary-color);
+}
+
+/* ✨ Keep the 2x2 Grid on Mobile but Scale It Down */
+@media (max-width: 600px) {
+    .contact-info-section {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2x2 grid */
+        gap: 0.5rem; /* Reduce spacing */
+        padding: 1rem; /* Less padding */
+    }
+
+    .contact-info-box {
+        padding: 10px; /* Smaller padding */
+    }
+
+    .contact-info-box i {
+        font-size: 24px; /* Smaller icons */
+    }
+
+    .contact-info-box h3 {
+        font-size: 16px; /* Smaller headings */
+    }
+
+    .contact-info-box p {
+        font-size: 12px; /* Small but readable */
+    }
+}
+.pdf-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100vh;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Only show iframe on desktop */
+.pdf-desktop {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Hide mobile message on desktop */
+.pdf-mobile {
+    display: none;
+    text-align: center;
+}
+
+/* On mobile, hide iframe and show download link */
+@media screen and (max-width: 768px) {
+    .pdf-desktop {
+        display: none;
+        visibility: hidden;
+        height: 0;
+    }
+    .pdf-mobile {
+        display: block;
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
