@@ -17,7 +17,7 @@ Welcome to my personal portfolio website! This project showcases my work, skills
 ## How to Run Locally 🖥️
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Aidan-Ingram/PersonalSite.git
+   git clone https://github.com/Aidan-Ingram/MySite.git
    ```
 2. Navigate to the project folder:
    ```bash
