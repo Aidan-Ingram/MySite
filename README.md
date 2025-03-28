@@ -1,4 +1,4 @@
-# Aidan's Personal Portfolio Website 🚀
+# Personal Portfolio Website 🚀
 
 Welcome to my personal portfolio website! This project showcases my work, skills, and experience as a developer. Built with a sleek and responsive design, this site serves as both a personal brand and an interactive resume. Feel free to explore, check out my projects, and connect with me! 🌟
 

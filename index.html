@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function () {
+            if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.style.backgroundColor = '#181818'; // Dark mode background for <html>
+                document.body.style.backgroundColor = '#181818'; // Dark mode background for <body>
+                document.body.classList.add("dark-mode"); // Ensure the dark mode class is applied early
+            }
+        })();
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Aidan Ingram",
+            "url": "https://aidaningram.com",
+            "logo": "https://aidaningram.com/src/images/seo_logo.png"
+        }
+    </script>
+
+    <!-- Sitemap for Search Engines -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://aidaningram.com/sitemap.xml">
+    <title>Aidan Ingram - Developer</title>
+    <!-- Standard Favicon (48x48 PNG) -->
+    <link rel="icon" type="image/png" sizes="48x48" href="src/images/site_logo.png">
+
+    <!-- ICO Format (For Older Browsers) -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Apple Touch Icon (For Mobile Devices) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+
+
+
+    <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="Portfolio of Aidan Ingram, a full-stack developer specializing in web development, cybersecurity, and software engineering.">
+    <meta name="keywords" content="Aidan Ingram, software engineer, full-stack developer, web development, cybersecurity, programming, portfolio, JavaScript, Python, React, Node.js, software projects, cloud computing, UI/UX, GitHub">
+
+    <meta name="author" content="Aidan Ingram">
+    <meta property="og:title" content="Aidan Ingram - Developer">
+    <meta property="og:description" content="I'm Aidan Ingram, a full-stack developer with expertise in web development, cybersecurity, and software engineering. Check out my projects, and portfolio.">
+    <meta property="og:image" content="https://aidaningram.com/src/images/site_preview.png">
+    <meta property="og:url" content="https://aidaningram.com">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Aidan Ingram">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="src/css/bootstrap.min.css">
+     <link rel="stylesheet" href="src/css/all.min.css">
+     <link rel="stylesheet" href="src/css/owl.carousel.min.css">
+     <link rel="stylesheet" href="src/css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="src/css/aidan-ingram-site.css">
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="50">
+
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-image" href="index.html">
+                <img src="src/images/site_logo.png" alt="Site Logo">
+            </a>
+            <a class="navbar-brand" href="index.html">
+               Aidan Ingram - Developer
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link smoothScroll">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#testimonials" class="nav-link smoothScroll">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link smoothScroll">Contact</a>
+                    </li>
+                    <!-- Centered Button as a Nav Item -->
+                    <li class="nav-item text-center">
+                        <a href="src/Aidan_Ingram_CV.pdf" class="custom-btn btn d-block mx-auto" download>Download CV</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero d-flex flex-column justify-content-center align-items-center" id="intro">
+        <div class="container">
+            <div class="row">
+                <!-- Profile Image -->
+                <div class="mx-auto col-lg-5 col-md-5 col-10">
+                    <img src="src/images/aidan.png" class="about-image img-fluid" alt="Aidan Ingram Profile Pic">
+                </div>
+
+                <!-- Chat Section -->
+                <div class="d-flex flex-column justify-content-center align-items-center col-lg-7 col-md-7 col-12">
+                    <div class="chat-box">
+                        <div class="message employer">👋 Hi! I'm Aidan.</div>
+                        <div class="message aidan">Hey Aidan! We're looking for a developer with strong front-end and back-end skills. How can we connect with you?</div>
+                        <div class="message employer">That's great! I specialize in full-stack development. Reach out <a href="contact.html" class="email-link">here!</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <!-- Centered Header -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3 class="mb-4">About Me</h3>
+                </div>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <ul class="nav nav-tabs justify-content-center" id="aboutTabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link" id="personal-tab" data-toggle="tab" href="#personal" role="tab" aria-controls="personal" aria-selected="true">General Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="projects-tab" data-toggle="tab" href="#projects" role="tab" aria-controls="projects" aria-selected="false">Projects</a>
+                </li>
+            </ul>
+
+            <!-- Tab Content -->
+            <div class="tab-content mt-4" id="aboutTabContent">
+                <!-- Personal Life Tab -->
+                <div class="tab-pane fade" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+                    <p>I live in Linwood, Kansas with my girlfriend, dog, and three cats.
+                        I attend the University of Kansas and expect to graduate in Spring 2026.
+                        My hobbies include computer building, Warhammer, and reading. I also enjoy going to the gym, and creating programming projects.
+                    I'm a huge tech nerd, and enjoy doing everything from video games to DNS querying.</p>
+                </div>
+
+                <!-- Projects Tab (With Carousel) -->
+                <!-- Projects Tab (With Updated Carousel) -->
+                <!-- Projects Tab (With Updated Carousel) -->
+                <!-- Projects Tab (Updated Carousel) -->
+                <div class="tab-pane fade show active" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+                    <div id="projectCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <a href="https://github.com/Aidan-Ingram/PersonalSite.git" target="_blank">
+                                    <img src="src/images/personal_site.png" class="d-block w-100 project-img" alt="Personal Website">
+                                </a>
+                                <div class="project-info">
+                                    <h5>Personal Website</h5>
+                                    <p>This is the repo for the site you're currently looking at!</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://github.com/coffman686/EECS-510-Final-Project-Braille-Translation-Language.git" target="_blank">
+                                    <img src="src/images/dfa_proj.png" class="d-block w-100 project-img" alt="Deterministic Finite Automaton">
+                                </a>
+                                <div class="project-info">
+                                    <h5>Deterministic Finite Automaton</h5>
+                                    <p>A group project concerning the creation of a Braille translation DFA to be translated to AR.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="https://github.com/Aidan-Ingram/EECS-447-LibraryDB.git" target="_blank">
+                                    <img src="src/images/db_proj.png" class="d-block w-100 project-img" alt="Library Database">
+                                </a>
+                                <div class="project-info">
+                                    <h5>Library Database</h5>
+                                    <p>A team-built library database that encompasses all aspects of DB design, including implementation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- TESTIMONIAL -->
+     <section class="testimonials section-padding" id="testimonials">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-12">
+                        <h3 class="mb-5 text-center">Employer Testimonials</h3>
+
+                        <div class="owl-carousel owl-theme" id="testimonials-carousel">
+                            <div class="item">
+                                <div class="testimonials-thumb d-flex">
+                                    <div class="testimonials-image">
+                                        <img src="src/images/testimonials/mike.png" class="img-fluid" alt="mike chilcoat image">
+                                    </div>
+
+                                    <div class="testimonials-info">
+                                        <p class="mb-7">Aidan has been an excellent employee, and I am happy to provide him a great reference.</p>
+
+                                        <h6 class="mb-0">Mike Chilcoat</h6>
+                                        <span class="test-desc">SR. Network Engineer at Orizon Aerostructures</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="testimonials-thumb d-flex">
+                                    <div class="testimonials-image">
+                                        <img src="src/images/testimonials/brian.png" class="img-fluid" alt="brian fife image">
+                                    </div>
+
+                                    <div class="testimonials-info">
+                                        <p class="mb-7">Aidan has assisted me with both hardware and software issues; he is very knowledgeable in his discipline.</p>
+
+                                        <h6 class="mb-0">Brian Fife</h6>
+                                        <span class="test-desc">IT Coordinator at the University of Kansas</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="testimonials-thumb d-flex">
+                                    <div class="testimonials-image">
+                                        <img src="src/images/testimonials/marc.png" class="img-fluid" alt="testimonials image">
+                                    </div>
+
+                                    <div class="testimonials-info">
+                                        <p class="mb-7">For the entire time he worked for me he was a hard worker, and for that he earned praise from my peers.</p>
+
+                                        <h6 class="mb-0">Marc Spellman</h6>
+                                        <span class="test-desc">CIO at Safe Haven Security Services</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <div class="testimonials-thumb d-flex">
+                                    <div class="testimonials-image">
+                                        <img src="src/images/testimonials/john.png" class="img-fluid" alt="testimonials image">
+                                    </div>
+
+                                    <div class="testimonials-info">
+                                        <p class="mb-7">Aidan has done a great job this last year, and is eager to learn. His skills continue to develop!</p>
+
+                                        <h6 class="mb-0">John Hofer</h6>
+                                        <span class="test-desc">VP of Application Development at EMPLOYERS</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <!-- FAQ -->
+     <section class="faq section-padding" id="faq">
+        
+        <div class="container">
+            
+            <div class="row">
+
+                <div class="col-lg-12 col-12">
+
+                    <h3 class="mb-5">Frequently Asked Questions</h3>
+
+                    <div class="accordion" id="accordionExample">
+                      <div class="card">
+                        <div class="card-header" id="headingOne">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              Are you currently working as a developer?
+                            </button>
+                          </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <p>Yes, I am currently working for EMPLOYERS Insurance as an application development intern.</p>
+
+                            <p>Additionally, I work for the University of Kansas in the Academic Technology Student Team (IT).</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header" id="headingTwo">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Do you have relevant experience?
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <p>Yes, I do. In addition to my internships, I have some projects linked above in the <a href="#about">About section</a>.</p>
+
+                              <p>In regards to my internships my time at Orizon Aerostructures focused on backend work in Python, while my time at EMPLOYERS Insurance has had me working with Angular, Java, and MongoDB.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <div class="card-header" id="headingThree">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              Where are you located?
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                          <div class="card-body">
+                            <p>I am located in Lawrence, Kansas. I have, however, worked in Kansas City, Kansas, and Kansas City, Missouri. I am open to commuting!</p>
+                          </div>
+                        </div>
+                      </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                          <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              Are you still a student?
+                            </button>
+                          </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                          <div class="card-body">
+                              <p> I am currently attending the University of Kansas, and am a full time student.</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <span class="faq-info-text">Have additional questions? Contact me  <a href="contact.html" class="und">here.</a></span>
+
+                </div>
+
+           	 </div><!-- col -->
+        	</div><!-- row -->
+        </div><!-- container -->
+    </section>
+
+    <!-- CONTACT -->
+    <!-- FOOTER -->
+    <footer class="footer section-padding">
+        <div class="container">
+            <div class="footer-links">
+                <!-- Quick Links -->
+                <div>
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="network-paper.html">Research</a></li>
+                        <li><a href="#about">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="socials">
+                    <h5>Follow Me</h5>
+                    <div class="social-icons">
+                        <a href="https://github.com/Aidan-Ingram" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/aidan-ingram" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com/awi03" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://dev.to/aidaningram" target="_blank"><i class="fab fa-dev"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Witty Contact Link -->
+            <div class="text-center contact-link">
+                <p>Want to build something cool? <a href="contact.html">Let's talk.</a></p>
+            </div>
+
+            <!-- Footer Logo -->
+            <div class="footer-logo text-center">
+                <img src="src/images/site_logo.png" alt="Logo">
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center">
+                <p class="copyright-text">&copy; 2025 Aidan Ingram. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+     <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="src/js/jquery.min.js"></script>
+     <script src="src/js/bootstrap.min.js"></script>
+     <script src="src/js/smoothscroll.js"></script>
+     <script src="src/js/owl.carousel.min.js"></script>
+     <script src="src/js/custom.js"></script>
+
+</body>
+</html>
