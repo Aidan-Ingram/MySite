@@ -40,7 +40,7 @@ body {
     --contact-background:          rgba(255, 255, 255, 0.1);
     --contact-shadow:              rgba(0, 0, 0, 0.2);
 
-    --base-font-family:     "Plain", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --base-font-family:     -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --font-weight-bold:     600;
     --font-weight-normal:   400;
     --font-weight-light:    300;
