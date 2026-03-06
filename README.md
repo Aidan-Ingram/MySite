@@ -30,14 +30,14 @@ Welcome to my personal portfolio website! This project showcases my work, skills
    *(If you have Live Server installed, otherwise just open manually)*
 
 ## Project Highlights 🚀
-### 📌 [Personal Website](https://github.com/Aidan-Ingram/PersonalSite.git)
-> The very site you're viewing! Built with HTML, CSS, and JavaScript to showcase my portfolio.
+### 📌 [MunchMates](https://github.com/coffman686/MunchMates.git)
+> A full-stack recipe discovery and pantry management application built with React, Node.js, and PostgreSQL. The platform allows users to track ingredients, save recipes, and discover meals they can cook using available pantry items, with Redis caching and external API integration to improve performance.
 
-### 📌 [Deterministic Finite Automaton](https://github.com/coffman686/EECS-510-Final-Project-Braille-Translation-Language.git)
-> A group project that implements a DFA for Braille translation, designed for AR applications.
+### 📌 [QUASH](https://github.com/Aidan-Ingram/EECS678-Project-1.git)
+> A custom Linux command-line shell written in C that supports command parsing, process management, and pipelining using low-level POSIX system calls. The project demonstrates core operating system concepts such as process control, I/O redirection, and inter-process communication.
 
 ### 📌 [Library Database](https://github.com/Aidan-Ingram/EECS-447-LibraryDB.git)
-> A comprehensive library database system that covers full database design and implementation.
+> A fully designed and implemented relational database system for managing library resources, including books, magazines, and digital media. Built with SQL and normalized schema design, the project demonstrates database modeling, query development, and data management workflows.
 
 ## Future Enhancements 🔮
 - 🌎 SEO improvements for better visibility.
