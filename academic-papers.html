@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Academic Papers - Aidan Ingram</title>
+    <link rel="icon" type="image/png" sizes="48x48" href="src/images/site_logo.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+    <meta name="description" content="Academic papers and research reports by Aidan Ingram.">
+
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/all.min.css">
+    <link rel="stylesheet" href="src/css/aidan-ingram-site.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-image" href="index.html">
+            <img src="src/images/site_logo.png" alt="Site Logo">
+        </a>
+        <a class="navbar-brand" href="index.html">
+            Aidan Ingram - Developer
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="index.html#projects" class="nav-link smoothScroll">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="academic-papers.html" class="nav-link smoothScroll">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link smoothScroll">Contact</a>
+                </li>
+                <li class="nav-item text-center">
+                    <a href="src/Aidan_Ingram_CV.pdf" class="custom-btn btn d-block mx-auto" download>Download CV</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section class="papers-section section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="mb-2">Academic Papers</h3>
+                <p class="papers-intro">Research reports and academic writing from my coursework and independent study.</p>
+            </div>
+        </div>
+
+        <div class="papers-grid">
+
+            <div class="paper-card">
+                <a href="network-paper.html" class="paper-thumbnail-link">
+                    <div class="paper-thumbnail">
+                        <div class="pdf-loading">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Loading preview...</span>
+                        </div>
+                        <canvas class="pdf-canvas" data-pdf="src/academic-papers/Nikto-and-Wapiti-Report.pdf"></canvas>
+                    </div>
+                </a>
+                <div class="paper-info">
+                    <span class="paper-tag">Cybersecurity</span>
+                    <h5 class="paper-title">Nikto &amp; Wapiti Analysis</h5>
+                    <p class="paper-desc">A comparative security analysis using Nikto and Wapiti web application vulnerability scanners against a test environment.</p>
+                    <div class="paper-actions">
+                        <a href="network-paper.html" class="custom-btn2 paper-btn-view">View Paper</a>
+                        <a href="src/academic-papers/Nikto-and-Wapiti-Report.pdf" class="paper-btn-download" download>
+                            <i class="fas fa-download"></i> PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <a href="heap-overflow.html" class="paper-thumbnail-link">
+                    <div class="paper-thumbnail">
+                        <div class="pdf-loading">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Loading preview...</span>
+                        </div>
+                        <canvas class="pdf-canvas" data-pdf="src/academic-papers/Heap-Overflow-Report.pdf"></canvas>
+                    </div>
+                </a>
+                <div class="paper-info">
+                    <span class="paper-tag">Exploit Dev</span>
+                    <h5 class="paper-title">Heap Overflow Report</h5>
+                    <p class="paper-desc">An analysis of heap overflow vulnerabilities, covering exploitation techniques and memory corruption in vulnerable applications.</p>
+                    <div class="paper-actions">
+                        <a href="heap-overflow.html" class="custom-btn2 paper-btn-view">View Paper</a>
+                        <a href="src/academic-papers/Heap-Overflow-Report.pdf" class="paper-btn-download" download>
+                            <i class="fas fa-download"></i> PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <a href="ie8-exploit.html" class="paper-thumbnail-link">
+                    <div class="paper-thumbnail">
+                        <div class="pdf-loading">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Loading preview...</span>
+                        </div>
+                        <canvas class="pdf-canvas" data-pdf="src/academic-papers/IE8-Exploit.pdf"></canvas>
+                    </div>
+                </a>
+                <div class="paper-info">
+                    <span class="paper-tag">Exploit Dev</span>
+                    <h5 class="paper-title">IE8 Exploit</h5>
+                    <p class="paper-desc">An exploration of a known Internet Explorer 8 vulnerability, detailing the exploit chain and underlying browser memory handling flaws.</p>
+                    <div class="paper-actions">
+                        <a href="ie8-exploit.html" class="custom-btn2 paper-btn-view">View Paper</a>
+                        <a href="src/academic-papers/IE8-Exploit.pdf" class="paper-btn-download" download>
+                            <i class="fas fa-download"></i> PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <a href="seh-overflow.html" class="paper-thumbnail-link">
+                    <div class="paper-thumbnail">
+                        <div class="pdf-loading">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Loading preview...</span>
+                        </div>
+                        <canvas class="pdf-canvas" data-pdf="src/academic-papers/SEH-Overflow-Report.pdf"></canvas>
+                    </div>
+                </a>
+                <div class="paper-info">
+                    <span class="paper-tag">Exploit Dev</span>
+                    <h5 class="paper-title">SEH Overflow Report</h5>
+                    <p class="paper-desc">A technical report on Structured Exception Handler (SEH) overflow attacks, covering overwrite techniques and exploit mitigations.</p>
+                    <div class="paper-actions">
+                        <a href="seh-overflow.html" class="custom-btn2 paper-btn-view">View Paper</a>
+                        <a href="src/academic-papers/SEH-Overflow-Report.pdf" class="paper-btn-download" download>
+                            <i class="fas fa-download"></i> PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="paper-card">
+                <a href="social-engineering.html" class="paper-thumbnail-link">
+                    <div class="paper-thumbnail">
+                        <div class="pdf-loading">
+                            <i class="fas fa-file-pdf"></i>
+                            <span>Loading preview...</span>
+                        </div>
+                        <canvas class="pdf-canvas" data-pdf="src/academic-papers/Social-Engineering-Report.pdf"></canvas>
+                    </div>
+                </a>
+                <div class="paper-info">
+                    <span class="paper-tag">Cybersecurity</span>
+                    <h5 class="paper-title">Social Engineering Report</h5>
+                    <p class="paper-desc">An examination of social engineering attack vectors including phishing, pretexting, and psychological manipulation tactics used in real-world scenarios.</p>
+                    <div class="paper-actions">
+                        <a href="social-engineering.html" class="custom-btn2 paper-btn-view">View Paper</a>
+                        <a href="src/academic-papers/Social-Engineering-Report.pdf" class="paper-btn-download" download>
+                            <i class="fas fa-download"></i> PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer section-padding">
+    <div class="container">
+        <div class="footer-links">
+            <div>
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="academic-papers.html">Research</a></li>
+                    <li><a href="index.html#about">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="socials">
+                <h5>Follow Me</h5>
+                <div class="social-icons">
+                    <a href="https://github.com/Aidan-Ingram" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/aidan-ingram" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/awi03" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://dev.to/aidaningram" target="_blank"><i class="fab fa-dev"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center contact-link">
+            <p>Want to build something cool? <a href="contact.html">Let's talk.</a></p>
+        </div>
+        <div class="footer-logo text-center">
+            <img src="src/images/site_logo.png" alt="Logo">
+        </div>
+        <div class="text-center">
+            <p class="copyright-text">&copy; 2025 Aidan Ingram. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="src/js/bootstrap.min.js"></script>
+<script src="src/js/custom.js"></script>
+
+<script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    document.querySelectorAll('.pdf-canvas').forEach(function (canvas) {
+        var pdfUrl = canvas.dataset.pdf;
+        var loading = canvas.closest('.paper-thumbnail').querySelector('.pdf-loading');
+
+        pdfjsLib.getDocument(pdfUrl).promise
+            .then(function (pdf) {
+                return pdf.getPage(1);
+            })
+            .then(function (page) {
+                var containerWidth = canvas.closest('.paper-thumbnail').offsetWidth || 300;
+                var unscaledViewport = page.getViewport({ scale: 1 });
+                var scale = containerWidth / unscaledViewport.width;
+                var viewport = page.getViewport({ scale: scale });
+                var outputScale = window.devicePixelRatio || 1;
+
+                canvas.width = Math.floor(viewport.width * outputScale);
+                canvas.height = Math.floor(viewport.height * outputScale);
+                canvas.style.width = Math.floor(viewport.width) + 'px';
+                canvas.style.height = Math.floor(viewport.height) + 'px';
+
+                var ctx = canvas.getContext('2d');
+                var transform = outputScale !== 1
+                    ? [outputScale, 0, 0, outputScale, 0, 0]
+                    : null;
+
+                return page.render({
+                    canvasContext: ctx,
+                    viewport: viewport,
+                    transform: transform
+                }).promise;
+            })
+            .then(function () {
+                loading.style.display = 'none';
+                canvas.style.display = 'block';
+            })
+            .catch(function (err) {
+                loading.innerHTML = '<i class="fas fa-file-pdf"></i><span>Preview unavailable</span>';
+                console.warn('PDF thumbnail error:', err);
+            });
+    });
+</script>
+
+</body>
+</html>
