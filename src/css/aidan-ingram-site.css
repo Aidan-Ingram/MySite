@@ -124,6 +124,9 @@ body.fade-in {
     .mb-0 {
         color: var(--white)
     }
+    .mb-2 {
+        color: var(--white);
+    }
     .mb-4 {
         color: var(--white);
     }
